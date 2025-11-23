@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:6030',
+  baseURL: process.env.REACT_APP_API_URL || 'https://lunch-rooster.onrender.com',
 });
 
 // Request interceptor to add auth token
