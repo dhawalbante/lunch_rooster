@@ -88,9 +88,9 @@ function Layout({ children }) {
             History
           </Link>
           {/* Uncomment when ready to use */}
-          {/* <Link to="/chat" className={isActive('/chat') ? 'active' : ''}>
+          <Link to="/chat" className={isActive('/chat') ? 'active' : ''}>
             Chat
-          </Link> */}
+          </Link>
           {user?.isAdmin && (
             <Link to="/admin" className={isActive('/admin') ? 'active' : ''}>
               Admin
