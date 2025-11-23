@@ -1,0 +1,167 @@
+.history-page h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.history-controls {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filter-select {
+    padding: 10px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    color: #2c3e50;
+    min-width: 150px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.stats-section h2,
+.assignments-section h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 8px;
+}
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-left: 4px solid #e74c3c;
+}
+
+.stat-card h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.stat-card .count {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.assignments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.assignment-item {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.assignment-item:hover {
+    background-color: #f8f9fa;
+}
+
+.assignment-item .date {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.assignment-item .user {
+    color: #3498db;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.assignment-item .status {
+    justify-self: end;
+}
+
+/* Scrollbar styling for assignments list */
+.assignments-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.assignments-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.assignments-list::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 3px;
+}
+
+.assignments-list::-webkit-scrollbar-thumb:hover {
+    background: #95a5a6;
+}
+
+@media (max-width: 968px) {
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stats-grid {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .stat-card {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-page h1 {
+        font-size: 2rem;
+    }
+
+    .assignment-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .assignment-item .status {
+        justify-self: center;
+    }
+
+    .history-controls {
+        justify-content: center;
+    }
+}
