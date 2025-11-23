@@ -20,7 +20,7 @@ function Chat() {
 
   const fetchMessages = async () => {
     try {
-      const response = await api.get('/api/chat/messages');
+      const response = await api.get('https://lunch-rooster.onrender.com/api/chat/messages');
       setMessages(response.data);
       scrollToBottom();
     } catch (err) {
@@ -35,7 +35,7 @@ function Chat() {
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return;
     try {
-      await api.post('/api/chat/messages', { message: inputMessage });
+      await api.post('https://lunch-rooster.onrender.com/api/chat/messages', { message: inputMessage });
       setInputMessage('');
       fetchMessages();
     } catch (err) {
