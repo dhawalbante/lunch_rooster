@@ -68,7 +68,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <h1>Lunch Cleanup Roster</h1>
+      <h1>आज पेपर कोन उठाएगा ? </h1>
       
       {error && <div className="error">{error}</div>}
 

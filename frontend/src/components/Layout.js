@@ -25,6 +25,9 @@ function Layout({ children }) {
           <Link to="/history" className={isActive('/history') ? 'active' : ''}>
             History
           </Link>
+          <Link to="/chat" className={isActive('/chat') ? 'active' : ''}>
+            Chat
+          </Link>
           {user?.isAdmin && (
             <Link to="/admin" className={isActive('/admin') ? 'active' : ''}>
               Admin

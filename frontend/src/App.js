@@ -7,6 +7,7 @@ import History from './pages/History';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Layout from './components/Layout';
+import Chat from './pages/Chat';
 import './App.css';
 
 function ProtectedRoute({ children, adminOnly = false }) {
@@ -54,6 +55,13 @@ function App() {
             <ProtectedRoute adminOnly={true}>
               <Layout>
                 <Admin />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/chat" element={
+            <ProtectedRoute>
+              <Layout>
+                <Chat />
               </Layout>
             </ProtectedRoute>
           } />
